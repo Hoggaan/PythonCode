@@ -133,12 +133,15 @@ from collections import namedtuple
 # pnt2 = point(3,4)
 # pnt3 = point(5,3)
 # dt = (pnt1.x * pnt2.x) + (pnt1.y * pnt2.y)
-car = namedtuple('car', 'qiimaha, lacagta, nuuca, isticmaal')
-premium = car(qiimaha = 1500, lacagta=2300, nuuca='premia',isticmaal=2)
-lst =  ['libaax', 'shabeel', 'bisad']
+car = namedtuple('car', 'qiimaha, lacagta')
+# premium = car(qiimaha = 1500, lacagta=2300, nuuca='premia',isticmaal=2)
+# lst =  ['libaax', 'shabeel', 'bisad']
 
-bahal = namedtuple('bahal', *lst)
+# bahal = namedtuple('bahal', *lst)
 
-print(premium.isticmaal)
+# print(premium.isticmaal)
 
+alaab = car(12, 22)
+car._make([22, 300])
 
+print()
