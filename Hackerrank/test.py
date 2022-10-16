@@ -144,4 +144,9 @@ car = namedtuple('car', 'qiimaha, lacagta')
 alaab = car(12, 22)
 car._make([22, 300])
 
-print()
+alaab = alaab._replace(qiimaha = 13)._asdict()
+print(alaab)
+
+gaari = namedtuple('gaari', [*car._fields, 'darawal'])
+gri = gaari(13, 234, 'Xassan')
+print(gri)
