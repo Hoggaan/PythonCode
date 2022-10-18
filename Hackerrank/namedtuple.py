@@ -30,6 +30,14 @@ point = (2,2)
 # print(prs)
 # print(prs2)
 
-person = namedtuple('person', 'name age height')
-bahal = person._make(["Farah", [12, 13, 34], 34.5])
-print(bahal._asdict())
+# person = namedtuple('person', 'name age height')
+# bahal = person._make(["Farah", [12, 13, 34], 34.5])
+# print(bahal._asdict())
+
+# # person = namedtuple('person', "Name Age Height Weight country", defaults=['Saudi'])
+# # Xassan = person('Xassan', 12, 1.5, [50, 50, 50, 50])
+# # for field, value in zip(Xassan._fields, Xassan):
+# #     print(field, ' --> ',value)
+
+# # print()
+# # print(Xassan._field_defaults)
