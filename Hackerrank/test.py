@@ -152,19 +152,20 @@ car = namedtuple('car', 'qiimaha, lacagta')
 # print(gri)
 
 
-from dateutil import tz, parser
-from dateutil.relativedelta import relativedelta
-from datetime import datetime
+# from dateutil import tz, parser
+# from dateutil.relativedelta import relativedelta
+# from datetime import datetime
 
-PYCON_DATE = parser.parse("May 12, 2023 8:00 PM")
-PYCON_DATE = PYCON_DATE.replace(tzinfo = tz.gettz("America/New_York"))
-now = datetime.now(tz=tz.tzlocal())
-countdown = relativedelta(PYCON_DATE, now)
-print(countdown)
+# PYCON_DATE = parser.parse("May 12, 2023 8:00 PM")
+# PYCON_DATE = PYCON_DATE.replace(tzinfo = tz.gettz("America/New_York"))
+# now = datetime.now(tz=tz.tzlocal())
+# countdown = relativedelta(PYCON_DATE, now)
+# print(countdown)
 
-def timeamoun(time_init: str, countdown:relativedelta): 
-    t = getattr(countdown, time_init)
-    return f"{t} {time_init}" if t != 0 else ""
+# def timeamoun(time_init: str, countdown:relativedelta): 
+#     t = getattr(countdown, time_init)
+#     return f"{t} {time_init}" if t != 0 else ""
 
-time_units = ["years", "months", "days", "hours", "minitues", "seconds"]
-output = (t for tu in time_units if (t := timeamoun(tu, countdown)))
+# time_units = ["years", "months", "days", "hours", "minitues", "seconds"]
+# output = (t for tu in time_units if (t := timeamoun(tu, countdown)))
+#

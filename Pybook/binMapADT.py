@@ -1,3 +1,6 @@
+from matplotlib.cbook import Stack
+
+
 class BTSMap:
     def __init__(self):
         self._root = None
@@ -9,7 +12,7 @@ class BTSMap:
     
     # Return an iterator for traversing the keys in the map
     def __iter__(self):
-        return _BTSMapIterator(self.root)
+        return _BSTMapIterator(self.root)
     # Determine if the map contains the given key
     def __contains__(self, key):
         return self._bstSearch(self._root, key) is not None
@@ -94,11 +97,58 @@ class BTSMap:
                 subtree.right = self._bstRemove(subtree.right, successor.key)
                 return subtree
 
+# An iterator for the binary search tree using an array
+class _BSTMapIterator:
+    def __init__(self, root, size):
+        # Creates the array and fills it with keys
+        self._theKeys = array(size)
+        self._curItem = 0 # Keep track the next possition of the array
+        self._bstTraversal(root)
+        self._curItem = 0
+    
+    def __iter__(self):
+        return self
+    
+    # Returns the next key from the array of keys
+    def __next__(self):
+        if self._curItem < len(self._theKeys):
+            key = self._theKeys[self._curItem]
+            self._curItem += 1
+            return key
+        else:
+            raise StopIteration
+    
+    # Performs an inorder traversal used to build the array of keys
+    def _bstTraversal(self, subtree):
+        if subtree is not None:
+            self._bstTraversal(subtree.left)
+            self._theKeys[self._curItem] = subtree.key
+            self._curItem += 1
+            self._bstTraversal(subtree.right)
 
-
-
-
-        
+# An iterator for the binary search tree using a software stack.
+class _BSTMapIterator:
+    def __init__(self, root):
+        self._theStack = Stack
+        self._traverseToMinNode(root)
+    
+    def __iter__(self):
+        return self
+    
+    # Returns the next item from the BST in key order
+    def __next__(self):
+        if self._theStack.isEmpty():
+            raise StopIteration 
+        else:
+            node = self._theStack.pop()
+            key = node.key
+            if node.right is not None:
+                self._traverseToMinNode(node.right)
+    
+    def _traverseToMinNode(self, subtree):
+        if subtree is not None:
+            self._theStack.push(subtree)
+            self._traverseToMinNode(subtree.left)
 
 # Storage class for the binary tree nodes of the map
 class _BTSMapNode:
