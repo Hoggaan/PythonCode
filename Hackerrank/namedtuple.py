@@ -1,6 +1,8 @@
 from collections import namedtuple
 from unicodedata import name
 
+from sympy import true
+
 # create a 2D tupe point as tuple 
 point = (2,2)
 #print(point)
@@ -41,4 +43,14 @@ point = (2,2)
 
 # # print()
 # # print(Xassan._field_defaults)
+
+# import csv
+# from collections import namedtuple
+
+# with open('Hackerrank/data.csv','r') as csvfile:
+#     reader = csv.reader(csvfile)
+#     Employee = namedtuple('Employee', next(reader), rename = true)
+#     for row in reader:
+#         emp = Employee(*row)
+#         print(emp.name, emp.job, emp.email)
 
