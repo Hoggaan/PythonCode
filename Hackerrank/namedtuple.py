@@ -54,3 +54,17 @@ point = (2,2)
 #         emp = Employee(*row)
 #         print(emp.name, emp.job, emp.email)
 
+
+#
+from collections import namedtuple
+
+num_studs = int(input())
+stud_info = namedtuple('stud_info', input())
+
+total_marks = 0
+for i in range(num_studs):
+    cur_info = stud_info(*input().split())
+    total_marks += int(cur_info.MARKS)
+
+print(total_marks/num_studs)
+    
