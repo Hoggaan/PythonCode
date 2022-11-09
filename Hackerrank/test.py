@@ -168,6 +168,3 @@ car = namedtuple('car', 'qiimaha, lacagta')
 
 # time_units = ["years", "months", "days", "hours", "minitues", "seconds"]
 # output = (t for tu in time_units if (t := timeamoun(tu, countdown)))
-#
-
-print(input().split())
