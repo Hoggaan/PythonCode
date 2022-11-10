@@ -168,3 +168,24 @@ car = namedtuple('car', 'qiimaha, lacagta')
 
 # time_units = ["years", "months", "days", "hours", "minitues", "seconds"]
 # output = (t for tu in time_units if (t := timeamoun(tu, countdown)))
+
+import numpy as np
+
+# print(np.random.uniform(-np.pi, np.pi))
+
+total = 0.0
+i = 0
+while i < 10:
+    total += 0.1
+    i += 1
+# print(total)
+
+s = "Yaaa Kaa Waalan"
+cnt = 0
+for s in s:
+    if s >= 'a' and s <= 'z':
+        cnt += 1
+print(cnt)
+
+s[0] = 'b'
+print(s)
