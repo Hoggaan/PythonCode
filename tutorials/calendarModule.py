@@ -31,6 +31,29 @@ c = calendar.Calendar()
 #     print(i, end=' ')
 
 m = calendar.Calendar()
-for i in m.itermonthdates(2022, 11):
-    print(i)
-print(calendar.monthrange(2022, 11))
+# for i in m.itermonthdates(2022, 11):
+#     print(i)
+# print(calendar.monthrange(2022, 11))
+
+# for i in m.itermonthdays2(2022, 11):
+#     print(i)
+
+mntdates = calendar.Calendar()
+# for i in mntdates.monthdatescalendar(2022, 11):
+#     print(i)
+
+# for i in c.monthdays2calendar(2022, 11):
+#     print(i)
+
+# for i in c.monthdayscalendar(2022, 11):
+#     print(i)
+
+
+c = calendar.TextCalendar()
+
+# print(c.formatmonth(2022, 11))
+# c.prmonth(2022, 11)
+# print(c.formatyear(2022))
+# print(c.formatday(1, 0, 2))
+for name in calendar.month_name:
+    print(name)

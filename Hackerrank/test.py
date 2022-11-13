@@ -185,7 +185,13 @@ cnt = 0
 for s in s:
     if s >= 'a' and s <= 'z':
         cnt += 1
-print(cnt)
+# print(cnt)
 
-s[0] = 'b'
-print(s)
+# s[0] = 'b'
+# print(s)
+lst = [12,2,2,2,1,2,3,2,2]
+# print(lst.index(3))
+
+dc = {'Aniga':1, 'Adiga': 2, 'Ayaga':3, 'Adinka':4}
+dc.pop('Adiga')
+print(dc)
