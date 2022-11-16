@@ -55,5 +55,31 @@ c = calendar.TextCalendar()
 # c.prmonth(2022, 11)
 # print(c.formatyear(2022))
 # print(c.formatday(1, 0, 2))
-for name in calendar.month_name:
-    print(name)
+# for name in calendar.month_name:
+#     print(name)
+
+
+from datetime import date, datetime
+
+# print(date.strftime(date("08-05-2015"), ("%Y,%d,%m")))
+print(datetime.strptime("08,05,2015", "%m,%d,%Y"))
+
+def mtch(argument):
+    match argument:
+        case 0:
+            return 'Monday'
+        case 1:
+            return 'Tuesday'
+        case 2:
+            return "Wednesday"
+        case 3:
+            return "Thursday"
+        case 4:
+            return "Friday"
+        case 5:
+            return "Saturday"
+        case 6:
+            return "Sunday"
+        case default:
+            return "Something"
+print(mtch(wkday))

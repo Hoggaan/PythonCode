@@ -194,4 +194,13 @@ lst = [12,2,2,2,1,2,3,2,2]
 
 dc = {'Aniga':1, 'Adiga': 2, 'Ayaga':3, 'Adinka':4}
 dc.pop('Adiga')
-print(dc)
+# print(dc)
+
+def min( arg1, arg2 ):
+    if arg1 is None or arg2 is None :
+        raise TypeError( "arguments to min() cannot be None" )
+    if arg1 < arg2 :
+        return arg1
+    else :
+        return arg2
+min(5)
