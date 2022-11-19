@@ -36,6 +36,17 @@ teachersDay = date(2023, 9, 5)
 today = date.today()
 
 # Calculate the number of days to teachers' day 
-timeToTD = teache
+timeToTD = teachersDay - today
+print(f"Teachers' day is {timeToTD.days} days away")
+
+#dt1 = datetime(Sun 10 May 2015 13:54:36 -0700")
+#dt2 = datetime('Sun 10 May 2015 13:54:36 -0000')
+
+# dtplus = dt1 + dt2
+# print(dt1)
+
+# Importing dateparser Module 
+
+dt1 
 
 
