@@ -46,7 +46,19 @@ print(f"Teachers' day is {timeToTD.days} days away")
 # print(dt1)
 
 # Importing dateparser Module 
+import dateparser
 
-dt1 
+dt1 = dateparser.parse("Sun 10 May 2015 13:54:36 -0700")
+dt2 = dateparser.parse("Sun 10 May 2015 13:54:36 -0000")
+diff_hrs = dt1 - dt2
+#secs = datetime.timedelta(seconds = diff_hrs*60*60).total_seconds() 
+print(diff_hrs.total_seconds())
 
+def time_delta(t1, t2):
+    dt1 = datetime.strptime(t1, '%a %d %b %Y %H:%M:%S %z')
+    dt2 = datetime.strptime(t2, '%a %d %b %Y %H:%M:%S %z')
+    diff_hrs = dt1 - dt2
+    return diff_hrs.total_seconds()
 
+secs = time_delta("Sun 10 May 2015 13:54:36 -0700","Sun 10 May 2015 13:54:36 -0000")
+print(secs)
